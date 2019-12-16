@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NYSL</title>
+  <link rel="shortcut icon" href="styles/img/nysl_logo.png">
+  <link rel="apple-touch-icon" href="styles/img/nysl_logo.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles/stylesheet.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body onload="showPost()" >
+  <div class="container">
+    <!-- "Menu" -->
+    <header class="row fixed-top">
+      <div class="col-12 container-1">
+        <div id="box1" class="box-1">
+          <img src="styles/img/nysl_logo.png" alt="">
+        </div>
+        <div class="box-2">
+          <h1>NYSL</h1>
+        </div>
+        <div class="box-3">
+          <img src="styles/img/nysl_logo.png" alt="">
+        </div>
+      </div>
+    </header>
+    <!-- Modal details -->
+    <div class="row">
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h1 class="text-dark"></h1>
+              <h2></h2>
+              <iframe width="270" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <h3></h3>
+            </div>
+            <div class="modal-footer">
+              <button onclick="goToForum()" type="button" class="w-100 btn btn-primary">Go to the forum of this
+                game!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal sign in -->
+    <div class="row">
+      <div class="modal fade" id="signModal" tabindex="-1" role="dialog" aria-labelledby="signModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button onclick="signIn()" type="button" class="w-100 btn btn-primary">Sign In with google</button>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- "Inicio" -->
+    <section class="row" id="inicio">
+      <div id="c2" class="container-2">
+        <div class="box-2-1">
+          <a onclick="myFunction('games')" role="button" href="#games">GAMES</a>
+        </div>
+        <div class="box-2-2">
+          <a onclick="myFunction('teams')" role="button" href="#teams">TEAMS</a>
+        </div>
+        <div class="box-2-3">
+          <a onclick="myFunction('contact')" role="button" href="#contact">CONTACT</a>
+        </div>
+      </div>
+    </section>
+    <!-- "Games" -->
+    <section class="row" id="games">
+      <div id="drop" class="col dropdown">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">All
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button onclick='month("All")' class="dropdown-item" type="button">All</button>
+          <button onclick='month("September")' class="dropdown-item" type="button">September</button>
+          <button onclick='month("October")' class="dropdown-item" type="button">October</button>
+        </div>
+      </div>
+      <div class="mt-3 alert alert-secondary alert-dismissible fade show" role="alert">
+        Click on details to see the forum!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="first" id="September">
+        <div class="shadow">
+          <div class="land p-0 container">
+            <span>9/01</span>
+            <table class="table1">
+              <thead>
+                <tr>
+                  <th scope="col">TIME</th>
+                  <th scope="col" class="loc">LOCATION</th>
+                  <th scope="col">TEAMS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.00pm</td>
+                  <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                        alt=""></a>
+                  </td>
+                  <td>U3 and U2
+                    <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                    <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                      data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                      data-time="9/01 | 1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                      type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="go-forum">
+              <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+                Go to the forum of this game!
+              </button>
+            </div>
+            <div id="if">
+              <iframe allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+            </div>
+            <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+          </div>
+          <div class="land p-0 mt-0  mb-4 container">
+            <table class="table1">
+              <thead class="enc">
+                <tr>
+                  <th scope="col">TIME</th>
+                  <th scope="col" class="loc">LOCATION</th>
+                  <th scope="col">TEAMS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.00pm</td>
+                  <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                        alt=""></a>
+                  </td>
+                  <td>U3 and U2
+                    <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                    <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                      data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                      data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                      type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="go-forum">
+              <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+                Go to the forum of this game!
+              </button>
+            </div>
+            <div id="if">
+              <iframe allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+            </div>
+            <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+          </div>
+        </div>
+        <div class="shadow">
+          <div class="land p-0 container">
+            <span>9/01</span>
+            <table class="table1">
+              <thead>
+                <tr>
+                  <th scope="col">TIME</th>
+                  <th scope="col" class="loc">LOCATION</th>
+                  <th scope="col">TEAMS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.00pm</td>
+                  <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                        alt=""></a>
+                  </td>
+                  <td>U3 and U2
+                    <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                    <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                      data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                      data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                      type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="go-forum">
+              <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+                Go to the forum of this game!
+              </button>
+            </div>
+            <div id="if">
+              <iframe allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+            </div>
+            <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+          </div>
+          <div class="land p-0 mt-0  mb-4 container">
+            <table class="table1">
+              <thead class="enc">
+                <tr>
+                  <th scope="col">TIME</th>
+                  <th scope="col" class="loc">LOCATION</th>
+                  <th scope="col">TEAMS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.00pm</td>
+                  <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                        alt=""></a>
+                  </td>
+                  <td>U3 and U2
+                    <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                    <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                      data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                      data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                      type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="go-forum">
+              <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+                Go to the forum of this game!
+              </button>
+            </div>
+            <div id="if">
+              <iframe allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+            </div>
+            <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+          </div>
+        </div>
+        <div class="shadow">
+          <div class="land p-0 container">
+            <span>9/01</span>
+            <table class="table1">
+              <thead>
+                <tr>
+                  <th scope="col">TIME</th>
+                  <th scope="col" class="loc">LOCATION</th>
+                  <th scope="col">TEAMS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.00pm</td>
+                  <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                        alt=""></a>
+                  </td>
+                  <td>U3 and U2
+                    <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                    <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                      data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                      data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                      type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="go-forum">
+              <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+                Go to the forum of this game!
+              </button>
+            </div>
+            <div id="if">
+              <iframe allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+            </div>
+            <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+          </div>
+          <div class="land p-0 mt-0  mb-4 container">
+            <table class="table1">
+              <thead class="enc">
+                <tr>
+                  <th scope="col">TIME</th>
+                  <th scope="col" class="loc">LOCATION</th>
+                  <th scope="col">TEAMS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.00pm</td>
+                  <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                        alt=""></a>
+                  </td>
+                  <td>U3 and U2
+                    <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                    <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                      data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                      data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                      type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="go-forum">
+              <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+                Go to the forum of this game!
+              </button>
+            </div>
+            <div id="if">
+              <iframe allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+            </div>
+            <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+          </div>
+        </div>
+        <div class="shadow">
+          <div class="land p-0 container">
+            <span>9/01</span>
+            <table class="table1">
+              <thead>
+                <tr>
+                  <th scope="col">TIME</th>
+                  <th scope="col" class="loc">LOCATION</th>
+                  <th scope="col">TEAMS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.00pm</td>
+                  <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                        alt=""></a>
+                  </td>
+                  <td>U3 and U2
+                    <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                    <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                      data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                      data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                      type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="go-forum">
+              <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+                Go to the forum of this game!
+              </button>
+            </div>
+            <div id="if">
+              <iframe allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+            </div>
+            <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+          </div>
+          <div class="land p-0 mt-0  mb-4 container">
+            <table class="table1">
+              <thead class="enc">
+                <tr>
+                  <th scope="col">TIME</th>
+                  <th scope="col" class="loc">LOCATION</th>
+                  <th scope="col">TEAMS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.00pm</td>
+                  <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                        alt=""></a>
+                  </td>
+                  <td>U3 and U2
+                    <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                    <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                      data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                      data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                      type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="go-forum">
+              <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+                Go to the forum of this game!
+              </button>
+            </div>
+            <div id="if">
+              <iframe allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+            </div>
+            <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+          </div>
+        </div>
+        <div class="shadow">
+          <div class="land p-0 container">
+            <span>9/01</span>
+            <table class="table1">
+              <thead>
+                <tr>
+                  <th scope="col">TIME</th>
+                  <th scope="col" class="loc">LOCATION</th>
+                  <th scope="col">TEAMS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.00pm</td>
+                  <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                        alt=""></a>
+                  </td>
+                  <td>U3 and U2
+                    <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                    <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                      data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                      data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                      type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="go-forum">
+              <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+                Go to the forum of this game!
+              </button>
+            </div>
+            <div id="if">
+              <iframe allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+            </div>
+            <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+          </div>
+          <div class="land p-0 mt-0  mb-4 container">
+            <table class="table1">
+              <thead class="enc">
+                <tr>
+                  <th scope="col">TIME</th>
+                  <th scope="col" class="loc">LOCATION</th>
+                  <th scope="col">TEAMS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.00pm</td>
+                  <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                        alt=""></a>
+                  </td>
+                  <td>U3 and U2
+                    <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                    <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                      data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                      data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                      type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="go-forum">
+              <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+                Go to the forum of this game!
+              </button>
+            </div>
+            <div id="if">
+              <iframe allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+            </div>
+            <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+          </div>
+        </div>
+      </div>
+      <div id="October" class="first">
+        <div class="shadow">
+          <div class="land p-0 container">
+            <span>10/01</span>
+            <table class="table1">
+              <thead>
+                <tr>
+                  <th scope="col">TIME</th>
+                  <th scope="col" class="loc">LOCATION</th>
+                  <th scope="col">TEAMS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.00pm</td>
+                  <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                        alt=""></a>
+                  </td>
+                  <td>U3 and U2
+                    <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                    <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                      data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                      data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                      type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="go-forum">
+              <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+                Go to the forum of this game!
+              </button>
+            </div>
+            <div id="if">
+              <iframe allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+            </div>
+            <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+          </div>
+          <div class="land p-0 mt-0  mb-4 container">
+            <table class="table1">
+              <thead class="enc">
+                <tr>
+                  <th scope="col">TIME</th>
+                  <th scope="col" class="loc">LOCATION</th>
+                  <th scope="col">TEAMS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.00pm</td>
+                  <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                        alt=""></a>
+                  </td>
+                  <td>U3 and U2
+                    <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                    <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                      data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                      data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                      type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="go-forum">
+              <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+                Go to the forum of this game!
+              </button>
+            </div>
+            <div id="if">
+              <iframe allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+            </div>
+            <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+          </div>
+        </div>
+        <div class="shadow">
+          <div class="land p-0 container">
+            <span>10/01</span>
+            <table class="table1">
+              <thead>
+                <tr>
+                  <th scope="col">TIME</th>
+                  <th scope="col" class="loc">LOCATION</th>
+                  <th scope="col">TEAMS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.00pm</td>
+                  <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                        alt=""></a>
+                  </td>
+                  <td>U3 and U2
+                    <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                    <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                      data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                      data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                      type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="go-forum">
+              <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+                Go to the forum of this game!
+              </button>
+            </div>
+            <div id="if">
+              <iframe allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+            </div>
+            <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+          </div>
+          <div class="land p-0 mt-0  mb-4 container">
+            <table class="table1">
+              <thead class="enc">
+                <tr>
+                  <th scope="col">TIME</th>
+                  <th scope="col" class="loc">LOCATION</th>
+                  <th scope="col">TEAMS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.00pm</td>
+                  <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                        alt=""></a>
+                  </td>
+                  <td>U3 and U2
+                    <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                    <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                      data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                      data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                      type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="go-forum">
+              <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+                Go to the forum of this game!
+              </button>
+            </div>
+            <div id="if">
+              <iframe allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+            </div>
+            <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+          </div>
+        </div>
+        <div class="shadow">
+          <div class="land p-0 container">
+            <span>10/01</span>
+            <table class="table1">
+              <thead>
+                <tr>
+                  <th scope="col">TIME</th>
+                  <th scope="col" class="loc">LOCATION</th>
+                  <th scope="col">TEAMS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.00pm</td>
+                  <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                        alt=""></a>
+                  </td>
+                  <td>U3 and U2
+                    <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                    <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                      data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                      data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                      type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="go-forum">
+              <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+                Go to the forum of this game!
+              </button>
+            </div>
+            <div id="if">
+              <iframe allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+            </div>
+            <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+          </div>
+          <div class="land p-0 mt-0  mb-4 container">
+            <table class="table1">
+              <thead class="enc">
+                <tr>
+                  <th scope="col">TIME</th>
+                  <th scope="col" class="loc">LOCATION</th>
+                  <th scope="col">TEAMS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.00pm</td>
+                  <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                        alt=""></a>
+                  </td>
+                  <td>U3 and U2
+                    <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                    <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                      data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                      data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                      type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="go-forum">
+              <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+                Go to the forum of this game!
+              </button>
+            </div>
+            <div id="if">
+              <iframe allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+            </div>
+            <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+          </div>
+        </div>
+        <div class="shadow">
+          <div class="land p-0 container">
+            <span>10/01</span>
+            <table class="table1">
+              <thead>
+                <tr>
+                  <th scope="col">TIME</th>
+                  <th scope="col" class="loc">LOCATION</th>
+                  <th scope="col">TEAMS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.00pm</td>
+                  <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                        alt=""></a>
+                  </td>
+                  <td>U3 and U2
+                    <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                    <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                      data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                      data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                      type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="go-forum">
+              <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+                Go to the forum of this game!
+              </button>
+            </div>
+            <div id="if">
+              <iframe allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+            </div>
+            <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+          </div>
+          <div class="land p-0 mt-0  mb-4 container">
+            <table class="table1">
+              <thead class="enc">
+                <tr>
+                  <th scope="col">TIME</th>
+                  <th scope="col" class="loc">LOCATION</th>
+                  <th scope="col">TEAMS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.00pm</td>
+                  <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                        alt=""></a>
+                  </td>
+                  <td>U3 and U2
+                    <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                    <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                      data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                      data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                      type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="go-forum">
+              <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+                Go to the forum of this game!
+              </button>
+            </div>
+            <div id="if">
+              <iframe allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+            </div>
+            <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+          </div>
+        </div>
+        <div class="shadow">
+          <div class="land p-0 container">
+            <span>10/01</span>
+            <table class="table1">
+              <thead>
+                <tr>
+                  <th scope="col">TIME</th>
+                  <th scope="col" class="loc">LOCATION</th>
+                  <th scope="col">TEAMS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.00pm</td>
+                  <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                        alt=""></a>
+                  </td>
+                  <td>U3 and U2
+                    <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                    <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                      data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                      data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                      type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="go-forum">
+              <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+                Go to the forum of this game!
+              </button>
+            </div>
+            <div id="if">
+              <iframe allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+            </div>
+            <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+          </div>
+          <div class="land p-0 mt-0  mb-4 container">
+            <table class="table1">
+              <thead class="enc">
+                <tr>
+                  <th scope="col">TIME</th>
+                  <th scope="col" class="loc">LOCATION</th>
+                  <th scope="col">TEAMS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.00pm</td>
+                  <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                        alt=""></a>
+                  </td>
+                  <td>U3 and U2
+                    <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                    <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                      data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                      data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                      type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div id="go-forum">
+              <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+                Go to the forum of this game!
+              </button>
+            </div>
+            <div id="if">
+              <iframe allowfullscreen
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+            </div>
+            <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- "Teams" -->
+    <section class="row" id="teams">
+      <div id="drop1" class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">All</button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+          <button onclick='team("all")' class="dropdown-item" type="button">All</button>
+          <button onclick='team("t1")' class="dropdown-item" type="button">Team 1</button>
+          <button onclick='team("t2")' class="dropdown-item" type="button">Team 2</button>
+          <button onclick='team("t3")' class="dropdown-item" type="button">Team 3</button>
+        </div>
+      </div>
+      <div class="mt-3 alert alert-secondary alert-dismissible fade show" role="alert">
+        Click on details to see the forum!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="t1" class="first">
+        <div class="shadow land p-0 mb-4 container">
+          <span>10/01</span>
+          <table class="table1">
+            <thead>
+              <tr>
+                <th scope="col">TIME</th>
+                <th scope="col" class="loc">LOCATION</th>
+                <th scope="col">TEAMS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1.00pm</td>
+                <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                      alt=""></a>
+                </td>
+                <td>U3 and U2
+                  <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                  <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                    data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                    data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                    type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="go-forum">
+            <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+              Go to the forum of this game!
+            </button>
+          </div>
+          <div id="if">
+            <iframe allowfullscreen
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+          </div>
+          <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+        </div>
+        <div class="shadow land p-0 mb-4 container">
+          <span>10/01</span>
+          <table class="table1">
+            <thead>
+              <tr>
+                <th scope="col">TIME</th>
+                <th scope="col" class="loc">LOCATION</th>
+                <th scope="col">TEAMS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1.00pm</td>
+                <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                      alt=""></a>
+                </td>
+                <td>U3 and U2
+                  <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                  <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                    data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                    data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                    type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="go-forum">
+            <button onclick="goToForum()" ype="button" class="m-1 btn btn-primary btn-sm">
+              Go to the forum of this game!
+            </button>
+          </div>
+          <div id="if">
+            <iframe allowfullscreen
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+          </div>
+          <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+        </div>
+        <div class="shadow land p-0 mb-4 container">
+          <span>10/01</span>
+          <table class="table1">
+            <thead>
+              <tr>
+                <th scope="col">TIME</th>
+                <th scope="col" class="loc">LOCATION</th>
+                <th scope="col">TEAMS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1.00pm</td>
+                <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                      alt=""></a>
+                </td>
+                <td>U3 and U2
+                  <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                  <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                    data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                    data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                    type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="go-forum">
+            <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+              Go to the forum of this game!
+            </button>
+          </div>
+          <div id="if">
+            <iframe allowfullscreen
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+          </div>
+          <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+        </div>
+        <div class="shadow land p-0 mb-4 container">
+          <span>10/01</span>
+          <table class="table1">
+            <thead>
+              <tr>
+                <th scope="col">TIME</th>
+                <th scope="col" class="loc">LOCATION</th>
+                <th scope="col">TEAMS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1.00pm</td>
+                <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                      alt=""></a>
+                </td>
+                <td>U3 and U2
+                  <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                  <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                    data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                    data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                    type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="go-forum">
+            <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+              Go to the forum of this game!
+            </button>
+          </div>
+          <div id="if">
+            <iframe allowfullscreen
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+          </div>
+          <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+        </div>
+      </div>
+      <div id="t2" class="first">
+        <div class="shadow land p-0 mb-4 container">
+          <span>10/01</span>
+          <table class="table1">
+            <thead>
+              <tr>
+                <th scope="col">TIME</th>
+                <th scope="col" class="loc">LOCATION</th>
+                <th scope="col">TEAMS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1.00pm</td>
+                <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                      alt=""></a>
+                </td>
+                <td>U3 and U2
+                  <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                  <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                    data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                    data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                    type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="go-forum">
+            <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+              Go to the forum of this game!
+            </button>
+          </div>
+          <div id="if">
+            <iframe allowfullscreen
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+          </div>
+          <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+        </div>
+        <div class="shadow land p-0 mb-4 container">
+          <span>10/01</span>
+          <table class="table1">
+            <thead>
+              <tr>
+                <th scope="col">TIME</th>
+                <th scope="col" class="loc">LOCATION</th>
+                <th scope="col">TEAMS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1.00pm</td>
+                <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                      alt=""></a>
+                </td>
+                <td>U3 and U2
+                  <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                  <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                    data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                    data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                    type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="go-forum">
+            <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+              Go to the forum of this game!
+            </button>
+          </div>
+          <div id="if">
+            <iframe allowfullscreen
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+          </div>
+          <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+        </div>
+        <div class="shadow land p-0 mb-4 container">
+          <span>10/01</span>
+          <table class="table1">
+            <thead>
+              <tr>
+                <th scope="col">TIME</th>
+                <th scope="col" class="loc">LOCATION</th>
+                <th scope="col">TEAMS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1.00pm</td>
+                <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                      alt=""></a>
+                </td>
+                <td>U3 and U2
+                  <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                  <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                    data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                    data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                    type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="go-forum">
+            <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+              Go to the forum of this game!
+            </button>
+          </div>
+          <div id="if">
+            <iframe allowfullscreen
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+          </div>
+          <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+        </div>
+      </div>
+      <div id="t3" class="first">
+        <div class="shadow land p-0 mb-4 container">
+          <span>10/01</span>
+          <table class="table1">
+            <thead>
+              <tr>
+                <th scope="col">TIME</th>
+                <th scope="col" class="loc">LOCATION</th>
+                <th scope="col">TEAMS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1.00pm</td>
+                <td class="loc">Greenbay<a href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                      alt=""></a>
+                </td>
+                <td>U3 and U2
+                  <!-- ESTE BOTON TIENE DATA-ALGO, CADA ALGO ES EL QUE USO DE PARÁMETRO PARA CAMBIAR LA INFO -->
+                  <button data-adress="W Walton St, Chicago, IL 60610, EE. UU."
+                    data-iframe="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"
+                    data-time="1.00pm" data-team="U3 and U2" data-toggle="modal" data-target="#exampleModal"
+                    type="button" class="float-right btn btn-secondary btn-sm">...</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="go-forum">
+            <button onclick="goToForum()" type="button" class="m-1 btn btn-primary btn-sm">
+              Go to the forum of this game!
+            </button>
+          </div>
+          <div id="if">
+            <iframe allowfullscreen
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2969.657202866899!2d-87.6290694!3d41.9002288!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1ses-419!2sar!4v1562364283102!5m2!1ses-419!2sar"></iframe>
+          </div>
+          <p>W Walton St, Chicago, IL 60610, EE. UU.</p>
+        </div>
+      </div>
+    </section>
+    <!-- "Contact" -->
+    <section class="row" id="contact">
+      <h1 id="cont" class="mt-2">CONTACT</h1>
+      <div id="contact-info">
+        <div class="c1">
+          <p>Please direct all questions to League Coordinator:</p>
+        </div>
+        <div class="c2">
+          <p>Michael Randall</p>
+        </div>
+        <div class="c3">
+          <a href="tel:(630)690-8132" class="href"><img src="styles/img/phone.png" alt="">(630) 690-8132</a>
+        </div>
+        <div class="c4">
+          <a href="mailto:michael.randall@chisoccer.org"><img src="styles/img/mail.png"
+              alt="">michael.randall@chisoccer.org</a>
+        </div>
+      </div>
+    </section>
+    <!-- "Forum"------------------------------------------------------------------------------------------------------------- -->
+    <section class="mt-4 row " id="forum">
+      <h2 class="float-left col-6 mt-1 mb-2" id="welcome"></h2>
+      <button onclick="signOut()" type="button" class="float-left col-6 btn btn-secondary">Logout</button>
+      
+      <div class="mt-5 shadow lond p-0 mb-4 container">
+        <span class="col-12" >10/01</span>
+        <table class="table1">
+          <thead>
+            <tr>
+              <th scope="col">TIME</th>
+              <th scope="col">LOCATION</th>
+              <th scope="col">TEAMS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1.00pm</td>
+              <td>Greenbay<a id="imgLand" href="https://goo.gl/maps/PY7tnwhnf38nJ1fj7"><img src="styles/img/map.png"
+                    alt=""></a>
+              </td>
+              <td>U3 and U2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <button data-toggle="modal" data-target="#newPost" id="add" class="btn btn-lg btn-secondary">Write new post</button>
+      <div class="col-12 mt-3 " id="postSection"></div>
+    </section>
+    <!-- "Modal new post" -->
+    <div class="modal fade" id="newPost" tabindex="-1" role="dialog" aria-labelledby="newPostLaber" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="newPostLabel">New post</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="form">
+              <div class="form-group">
+                <label for="title-name" class="float-left col-form-label">Title</label>
+                <input type="text" class="form-control" id="title-name" placeholder="Enter title">
+              </div>
+              <div class="form-group">
+                <label for="content-text" class="float-left col-form-label">Content:</label>
+                <input type="text" class="form-control" placeholder="Enter content" id="content-text"></input>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary">Post</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#config-web-app -->
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDH-puWBYSdr6NCOaxSyNBRx59FwMEq5eU",
+      authDomain: "nysl-games.firebaseapp.com",
+      databaseURL: "https://nysl-games.firebaseio.com",
+      projectId: "nysl-games",
+      storageBucket: "",
+      messagingSenderId: "500782287942",
+      appId: "1:500782287942:web:5bcd729a907dcec5"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="scripts/nysl.js"></script>
+  <script src="scripts/auth.js"></script>
+</body>
+
+</html>
